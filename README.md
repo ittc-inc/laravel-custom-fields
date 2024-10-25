@@ -177,7 +177,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Credits
 
-- [Sanchit Patil](https://github.com/SpykApp)
+- [Sanchit Patil](https://github.com/sanchitspatil)
 - [All Contributors](../../contributors)
 
 ## License
