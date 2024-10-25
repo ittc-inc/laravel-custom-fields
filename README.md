@@ -1,3 +1,5 @@
+![Cover Image](https://banners.beyondco.de/laravel-custom-fields.png?theme=dark&packageManager=composer+require&packageName=spykapp%2Flaravel-custom-fields&pattern=autumn&style=style_1&description=Laravel+Package+for+Managing+Custom+Fields+for+Each+Model&md=1&showWatermark=0&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg)
+
 # Laravel Package for Managing Custom Fields for Each Model
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spykapp/laravel-custom-fields.svg?style=flat-square)](https://packagist.org/packages/spykapp/laravel-custom-fields)
