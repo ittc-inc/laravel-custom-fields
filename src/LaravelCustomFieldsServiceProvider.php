@@ -17,9 +17,9 @@ class LaravelCustomFieldsServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-custom-fields')
-            ->hasConfigFile()
+            ->hasConfigFile('custom-fields')
             ->hasViews()
-            ->hasMigration('create_laravel_custom_fields_table')
+            ->hasMigration('create_custom_fields_table')
             ->hasCommand(LaravelCustomFieldsCommand::class);
     }
 }
