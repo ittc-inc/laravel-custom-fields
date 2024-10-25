@@ -6,7 +6,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class CustomField extends Model
 {
-    protected $fillable = ['name', 'label', 'rules', 'classes', 'field_type', 'options', 'sort', 'category', 'model_type', 'model_id'];
+    protected $fillable = [
+        'name',
+        'label',
+        'placeholder',
+        'rules',
+        'classes',
+        'field_type',
+        'options',
+        'default_value',
+        'description',
+        'hint',
+        'sort',
+        'category',
+        'model_type',
+        'entity_id'
+    ];
 
     protected $casts = [
         'rules' => 'json',
@@ -20,6 +35,15 @@ class CustomField extends Model
     {
         parent::__construct($attributes);
         $this->table = config('custom-fields.tables.custom_fields');
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope('ordered', function ($query) {
+            $query->orderBy('sort', 'asc')->orderBy('id', 'asc');
+        });
     }
 
     public function model()

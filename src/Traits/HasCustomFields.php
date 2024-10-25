@@ -75,9 +75,11 @@ trait HasCustomFields
                 throw new Exception("Custom field with ID {$response['custom_field_id']} does not exist.");
             }
 
+            $value = $response['value'] ?? $customField->default_value;
+
             if ($validate && $customField->rules) {
                 $rules = $customField->rules;
-                $validator = Validator::make(['value' => $response['value']], ['value' => $rules]);
+                $validator = Validator::make(['value' => $value], ['value' => $rules]);
 
                 if ($validator->fails()) {
                     throw new Exception("Validation failed for custom field '{$customField->name}': " . implode(', ', $validator->errors()->all()));
@@ -91,11 +93,11 @@ trait HasCustomFields
                     'model_id' => $this->getKey(),
                 ],
                 [
-                    'value' => $response['value']
+                    'value' => $value
                 ]
             );
 
-            $savedResponses[] = $customFieldResponse->id;
+            $savedResponses[] = $customFieldResponse;
         }
 
         return $savedResponses;

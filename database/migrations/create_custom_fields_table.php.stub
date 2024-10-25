@@ -17,6 +17,9 @@ return new class extends Migration
             $table->json('classes')->nullable();
             $table->string('field_type');
             $table->json('options')->nullable();
+            $table->text('default_value')->nullable();
+            $table->text('description')->nullable();
+            $table->string('hint')->nullable();
             $table->integer('sort')->default(0);
             $table->string('category')->nullable();
             $table->string('model_type');
