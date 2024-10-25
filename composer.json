@@ -1,6 +1,6 @@
 {
     "name": "spykapp/laravel-custom-fields",
-    "description": "Package for managing custom fields for each model in laravel.",
+    "description": "Laravel Package for Managing Custom Fields for Each Model.",
     "keywords": [
         "SpykApp",
         "laravel",
