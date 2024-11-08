@@ -22,6 +22,10 @@ return new class extends Migration
             $table->string('hint')->nullable();
             $table->integer('sort')->default(0);
             $table->string('category')->nullable();
+            $table->json('extra_attributes')->nullable();
+            $table->json('field_options')->nullable();
+            $table->string('cast_as')->nullable();
+            $table->boolean('has_options')->default(0);
             $table->string('model_type');
             $table->unsignedBigInteger('entity_id')->nullable();
             $table->timestamps();

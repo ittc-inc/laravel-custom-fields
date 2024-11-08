@@ -19,14 +19,20 @@ class CustomField extends Model
         'hint',
         'sort',
         'category',
+        'extra_attributes',
+        'field_options',
+        'cast_as',
+        'has_options',
         'model_type',
         'entity_id'
     ];
 
     protected $casts = [
-        'rules' => 'json',
-        'classes' => 'json',
-        'options' => 'json',
+        'rules' => 'array',
+        'classes' => 'array',
+        'options' => 'array',
+        'extra_attributes' => 'array',
+        'field_options' => 'array'
     ];
 
     protected $table;
